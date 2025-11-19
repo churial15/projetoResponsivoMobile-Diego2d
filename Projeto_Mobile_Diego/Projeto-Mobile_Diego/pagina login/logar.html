@@ -164,7 +164,7 @@ font-size: 17px; /* Define o tamanho da fonte como 17px */
 <div class="login-box">
   <p class="obrigatorio-texto"><span style="color: red;">*</span>campo obrigatório</p>
   <h2 class="logar">LOGAR</h2>
-  <form action="/login" method="POST">
+  <form id="meuformulario" action="/login" method="get">
     <label for="email"><span style="color: red;">*</span>Email</label>
     <input type="text" name="username" placeholder="Usuário" required>
 
@@ -185,3 +185,9 @@ font-size: 17px; /* Define o tamanho da fonte como 17px */
 </body>
 </html>
 
+<script>
+document.getElementById('meuformulario').addEventListener('submit', function(e) {
+  e.preventDefault(); // impede envio real
+  window.location.href = "Projeto_Mobile_DIego/Projeto-Mobile_Diego/pagina_informativo/logar.html"; // redireciona
+});
+</script>
